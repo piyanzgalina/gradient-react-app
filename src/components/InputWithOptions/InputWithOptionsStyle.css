@@ -1,0 +1,48 @@
+.input-with-options-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.selection-icon{
+    height: 42px;
+}
+
+svg{
+    fill: #7a7c8b;
+}
+.input{
+    height: 42px;
+    border-radius: 5px;
+    border: 0.5px solid #1f2667;
+    text-align: center;
+    font-weight: 700;
+    color: #1f2667;
+}
+.option-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.selection-container {
+    z-index: 99;
+    height: 42px;
+    border: 0.5px solid #1f2667;
+    text-align: center;
+}
+
+.selection-items {
+    z-index: 99;
+    background-color: #fff;
+    border: 0.5px solid #1f2667;
+    border-top: none;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+}
+
+
+.selection-item:hover{
+    background-color: #e6e8f4;
+    border-radius: 5px;
+
+}

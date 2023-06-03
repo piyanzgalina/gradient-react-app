@@ -1,0 +1,19 @@
+.input-container {
+    width: 92px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+
+.hex-input {
+    height: 42px;
+    width: 140px;
+    
+    border-radius: 5px;
+    border: 0.5px solid #1f2667;
+    text-align: center;
+    font-weight: 700;
+    color: #1f2667;
+}

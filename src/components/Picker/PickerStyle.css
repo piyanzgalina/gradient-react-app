@@ -1,0 +1,26 @@
+.picker .react-colorful {
+    width: 300px;
+    height: 240px;
+}
+
+.picker .react-colorful__saturation {
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+} 
+
+.picker .react-colorful__alpha {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+} 
+
+
+@media screen and (max-width: 650px) {
+    .picker .react-colorful {
+        width: 85vw;
+        height: 240px;
+    }
+    
+}
+
+    
