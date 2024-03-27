@@ -1,43 +1,55 @@
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
 .sliders{
-    grid-column: span 2;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    justify-content: start;
+    gap: 0.5em;
 }
 
 input[type="range"] {
     appearance: none;
 
-    width: 270px;
-    height: 12px;
-    border-radius: 5px;
+    width: 100%;
+    height: 0.8em;
+    border-radius: 0.5em;
 
-    margin-right: 10px;
+    margin-right: 0.5em;
 }
 
 input[type=range]::-webkit-slider-thumb {
     border: 2px solid #1f2667;
-    border-radius: 2px;
+    border-radius: 50%;
+    background-color: inherit;
     cursor: pointer;
-    width: 0px;
-    height: 20px;
+    width: 1em;
+    height: 1em;
     -webkit-appearance: none;
 }
 
 input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
     border: 2px solid #1f2667;
-    border-radius: 2px;
+    border-radius: 50%;
+    background-color: inherit;
     cursor: pointer;
-    width: 0px;
-    height: 20px;
+    width: 1em;
+    height: 1em;
+    -webkit-appearance: none;
 }
 
-.remove{
-    height: 20px;
-    width: 20px;
-    font-weight: bold;
+.remove {
+    height: 1em;
+    width: 1em;
     border: 0.5px solid #e5e5e6;
     border-radius: 50%;
+}
+
+@media (max-width: 650px ){
+    input[type="range"] {
+        width: 100%;
+        height: 1em;
+    }
 }

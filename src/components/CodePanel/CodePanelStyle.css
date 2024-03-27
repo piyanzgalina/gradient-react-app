@@ -1,30 +1,24 @@
 .code-panel-container {
-    width: 100vw;
-    padding: 0 30px;
     display: flex;
     flex-direction: column;
+    background-color: #1f2667;
+    border-radius: 5px;
 }
-
 
 .code-container {
     white-space: pre-line;
-    height: 160px;
-    padding: 25px;
+    height: 7em;
+    padding: 1em 2em;
     line-height: 1.5;
     font-size: 15px;
-    background-color: #1f2667;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
 }
 
-
 .copy-btn {
-    height: 40px;
+    height: 2em;
     background-color: #545475;
+    cursor: pointer;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    cursor: pointer;
-
 }
 
 .blue {

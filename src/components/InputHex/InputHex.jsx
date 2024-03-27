@@ -5,14 +5,15 @@ const InputHex = ({
     colors,
     selectedColor,
     setColors,
-    setSelectedColor }) => {
+    setSelectedColor
+    }) => {
 
     let rgbaColor;
 
     const hex2rgba = (hex) => {
         return(
             colord(hex).toRgbString()
-        );
+        ); 
     };
 
     return (
@@ -24,10 +25,10 @@ const InputHex = ({
             <input
                 type="text"
                 className="hex-input"
-                maxLength={7}
-                value={rgbaColor}
+                maxLength={ 7 }
+                value={ rgbaColor }
                 placeholder="#"
-                onChange={(e) => {
+                onChange={ (e) => {
                     rgbaColor = hex2rgba(e.target.value);
                     console.log(rgbaColor)
                     setColors(

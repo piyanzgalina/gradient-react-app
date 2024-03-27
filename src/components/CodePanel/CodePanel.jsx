@@ -17,7 +17,7 @@ const CodePanel = ({
             <div>
                 <pre className='code-container'>
                     <code>
-                        <span className='blue'>background:</span>
+                        <span className='blue'>background: </span>
                         {code}
                     </code>
                 </pre>

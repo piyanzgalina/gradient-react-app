@@ -1,6 +1,6 @@
 .input-container {
-    width: 92px;
-    height: 70px;
+    width: 4.6em;
+    height: 3.5em;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -8,8 +8,8 @@
 }
 
 .hex-input {
-    height: 42px;
-    width: 140px;
+    height: 2.1em;
+    width: 7em;
     
     border-radius: 5px;
     border: 0.5px solid #1f2667;

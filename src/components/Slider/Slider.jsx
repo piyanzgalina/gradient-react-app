@@ -10,6 +10,7 @@ const Slider = ({
 
     return (
         <div className="slider-container">
+
             <input
             style={{
                 backgroundColor: `${color.code}`,
@@ -37,6 +38,7 @@ const Slider = ({
                 );
             }}
             />
+            
             {colors.length > 2 && (
                 <button
                 className="remove"
@@ -44,6 +46,7 @@ const Slider = ({
                     setColors(colors.filter((c) => c.id !== color.id));
                 }}>-</button>
             )}
+
         </div>
     )
 }

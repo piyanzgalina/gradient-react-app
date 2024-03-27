@@ -22,7 +22,7 @@ export default function Main() {
             id: 1,
         },
     ]);
-    const [selectedColor, setSelectedColor] = useState(colors[1]);
+    const [selectedColor, setSelectedColor] = useState(colors[0]);
 
     const [id, setId] = useState(2);
 
@@ -103,107 +103,106 @@ export default function Main() {
     return (
         <main className="main">
 
-            <section
+            <div
                 className='screen'
                 style={{
                     background: code,
                 }}
-            ></section>
+            ></div>
 
-            <section className='settings'>
-
-                <div className='picker'>
-                    <ColorPicker
-                        color={selectedColor.code}
-                        colors={colors}
-                        selectedColor={selectedColor}
-                        setColors={setColors}
-                        setSelectedColor={setSelectedColor}
-                    />
-                </div>
+            <section className='container'>
 
                 <div className='color-gradient-settings'>
 
-                    <div className='sliders'>
-                    {colors.map((color) => (
-                            <Slider 
-                                key={color.id}
-                                color={color}
-                                colors={colors}
-                                setColors={setColors}
-                                selectedColor={selectedColor}
-                                setSelectedColor={setSelectedColor}
-                            />
-                        ))
-                    }
+                    <div className='picker'>
+                        <ColorPicker
+                            color={selectedColor.code}
+                            colors={colors}
+                            selectedColor={selectedColor}
+                            setColors={setColors}
+                            setSelectedColor={setSelectedColor}
+                        />
                     </div>
 
-                    <div className='color-icon-container'>
-                        {colors.map((color) => (
+                    <div className=''>
+                        <div className='sliders'>
+
+                            {colors.map((color) => (
+                                    <Slider 
+                                        key={color.id}
+                                        color={color}
+                                        colors={colors}
+                                        setColors={setColors}
+                                        selectedColor={selectedColor}
+                                        setSelectedColor={setSelectedColor}
+                                    />
+                                ))
+                            }
+                        </div>
+
+                        <div className='color-icon-container'>
+                            {colors.map((color) => (
+                                <span
+                                    key={color.id}
+                                    className='color-icon'
+                                    style={{
+                                        background: color.code,
+                                        border: `${
+                                          color.id == selectedColor.id
+                                            ? "2px solid #1f2667"
+                                            : ""
+                                        }`,
+                                    }}
+                                    onClick={() => setSelectedColor(color)}
+                                >
+                                </span>
+                            ))}
+                        
                             <span
-                                key={color.id}
-                                className='color-icon'
-                                style={{
-                                    background: color.code,
-                                    border: `${
-                                      color.id == selectedColor.id
-                                        ? "2px solid #1f2667"
-                                        : ""
-                                    }`,
-                                }}
-                                onClick={() => setSelectedColor(color)}
-                            >
-                            </span>
-                        ))}
-                    
-                        <span
-                            className='add-color'
-                            onClick={AddColor}
-                        >+</span>
-
+                                className='add-color'
+                                onClick={AddColor}
+                            >+</span>
+                        </div>
+                        
                     </div>
 
-    
-                    <InputHex
-                        colors={colors}
-                        selectedColor={selectedColor}
-                        setColors={setColors}
-                        setSelectedColor={setSelectedColor}
-                    />
+                    <div className='inputs-container'>
+                        <InputHex
+                            colors={colors}
+                            selectedColor={selectedColor}
+                            setColors={setColors}
+                            setSelectedColor={setSelectedColor}
+                        />
 
-                    <Toggle
-                        active={state.type}
-                        handleClick={handleType}
-                    />
+                        <Toggle
+                            active={state.type}
+                            handleClick={handleType}
+                        />
 
-                    <InputWithOptions
-                        label={'Position'}
-                        handleChange={handlePosition}
-                        options={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}
-                        unit={'%'}
-                        value={selectedColor.position}
-                    />
+                        <InputWithOptions
+                            label={'Position'}
+                            handleChange={handlePosition}
+                            options={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}
+                            unit={'%'}
+                            value={selectedColor.position}
+                        />
 
-                    <InputWithOptions
-                            label={'Rotation'}
-                            handleChange={handleRotation}
-                            options={[0, 45, 90, 135, 180, 225, 270, 315, 360]}
-                            unit={'°'}
-                            value={state.rotation}
+                        <InputWithOptions
+                                label={'Rotation'}
+                                handleChange={handleRotation}
+                                options={[0, 45, 90, 135, 180, 225, 270, 315, 360]}
+                                unit={'°'}
+                                value={state.rotation}
                             
-                    />
-
+                        />
+                    </div>
                 </div>
 
+                <CodePanel
+                    code={code}
+                />
+
             </section>
-
-            <CodePanel
-                code={code}
-            />
-           
-
-            
-
         </main>
     )
 }
