@@ -124,7 +124,7 @@ export default function Main() {
                         />
                     </div>
 
-                    <div className=''>
+                    <div className='foo'>
                         <div className='sliders'>
 
                             {colors.map((color) => (
